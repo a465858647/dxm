@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="js/Cesium/Cesium.js"></script>
+		<script src="./js/dxm.js"></script>
+		<link rel="stylesheet" href="js/Cesium/Widgets/widgets.css" />
+		<script src="js/jquery-3.5.1.js"></script>
+		<script src="./js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="./css/bootstrap/bootstrap.css" />
+		<script src="js/main.js"></script>
+	</head>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		.cesium-viewer-bottom {
+			display: none;
+		}
+		/* html, */
+		/* body {
+			height: 100%;
+		} */
+	</style>
+	<body>
+		<div id="cesiumdiv" style="height: 800px; width: 100%; background-color: black; position: relative; overflow: hidden;">
+			<div id="latlng_show" style="width: 340px; height: 10px; position: absolute; bottom: 10px; left: 0px; z-index: 1; font-size: 15px;">
+				<div style="width: 100px; height: 10px; float: left;">
+					<font size="2" color="white">经度：<span id="longitude_show"></span></font>
+				</div>
+				<div style="width: 100px; height: 10px; float: left;">
+					<font size="2" color="white">纬度：<span id="latitude_show"></span></font>
+				</div>
+				<div style="width: 140px; height: 10px; float: left;">
+					<font size="2" color="white">视角高：<span id="altitude_show"></span>km</font>
+				</div>
+			</div>
+		</div>
+		<div>
+			<!-- 行政区代码:
+			<input type="text" value="411300" id="codeTxt" />
+			<input type="button" value="查询" id="searchBtn" />
+			行政区名称:
+			<input type="text" value="郑州" id="codeTxt2" />
+			<input type="button" value="查询" id="searchBtn2" />
+			<br />
+			项目名称:
+			<input type="text" value="机西高速" id="projectName" />
+			项目金额:
+			<input type="text" value="1000" id="projectValue" />
+			项目类别:
+			<input type="text" value="交通" id="projectClass" />
+			项目位置X:
+			<input type="text" value="113.5465" id="projectPositionX" />
+			项目位置Y:
+			<input type="text" value="34.6363" id="projectPositionY" />
+			<input type="button" value="添加" id="searchBtn3" />
+			<br /> -->
+			坐标点：
+			<textarea rows="2" cols="100" id="coordinates"></textarea>
+			<input type="button" value="展点" id="zhandianBtn" />
+			<br />
+			<!-- <input type="button" value="捕捉" id="catchPointBtn" /> -->
+			<input type="button" value="在线增加点" id="addPointDXMBtn" />
+			<input type="button" value="在线删除点" id="removePointDXMBtn" />
+			<input type="button" value="在线编辑点位" id="updatePointDXMBtn" />
+			<br />
+			<input type="button" value="在线增加多段线" id="addPLDXMBtn" />
+			<input type="button" value="在线删除多段线" id="deletePLDXMBtn" />
+			<input type="button" value="在线编辑多段线" id="editPLDXMBtn" />
+			<input type="button" value="在线追加多段线" id="addToExitPLDXMBtn" />
+			<br />
+			<input type="button" value="在线增加多边形" id="addPolygonDXMBtn" />
+			<input type="button" value="在线删除多边形" id="removePolygonDXMBtn" />
+			<input type="button" value="在线裁剪多边形" id="addHoleInPolygonDXMBtn" />
+			<input type="button" value="在线编辑多边形" id="editPolygonDXMBtn" />
+			<input type="button" value="在线追加多边形" id="addToExitPolygonDXMBtn" />
+			<br />
+			<input type="button" value="在线编辑属性" id="editPropertyDXMBtn" />
+			<input type="button" value="测试" id="ceshiBtn" />
+		</div>
+	</body>
+</html>
